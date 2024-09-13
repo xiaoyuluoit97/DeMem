@@ -1,33 +1,10 @@
-# Privacy and Data Enhancement
-
-The official implementation of "On the Privacy Effect of Data Enhancement via the Lens of Memorization". In this work, we reproduced the LiRA method (Carlini et al. Membership Inference Attacks From First Principles) as the main privacy evaluation method for each data enhacement method.
-
 ### 1. Dependencies
 - CUDA 11.0
 - You can install the required packages by running: ```pip install -r requirements.txt```
 
 ### 2. Datasets
-- CIFAR-10, CIFAR-100, and SVHN can be downloaded directly from torchvision.datasets.
+- CIFAR-10, CIFAR-100 can be downloaded directly from torchvision.datasets.
 - Purchase and Locations can be downloaded from https://github.com/privacytrustlab/datasets
-
-
-### 3. File Structure
-```
-├── README.md
-├── advtrain.py     # Functions used for adversarial training.
-├── configs/        # Configuration files for training on different datasets.
-├── dataset.py      # Functions used for loading datasets.
-├── eval_privacy.py # Functions used for evaluating privacy using LiRA.
-├── inference.py    # Functions used for computing $\phi$ used in LiRA.
-├── models/         # DNN structures.
-├── requirements.txt
-├── sampleinfo/     # member and non-member information of 128 models used in LiRA.
-├── trades_awp.py   # Functions used for AWP and TRADES-AWP training.
-├── train.py        # Functions used for training (shadow) models.
-├── utils.py        # Other functions.
-└── utils_h.py      # Other functions.
-```
-
 
 
 ### 4. Usage
@@ -53,12 +30,3 @@ python eval_privacy.py --save_results --multi
 
 ### 5. Statement
 
-If you find our work helpful for you, please consider to cite:
-```
-@article{li2022privacy,
-  title={On the Privacy Effect of Data Enhancement via the Lens of Memorization},
-  author={Xiao Li and Qiongxiu Li and Zhanhao Hu and Xiaolin Hu},
-  journal={arXiv preprint arXiv:2208.08270},
-  year={2022}
-}
-```
